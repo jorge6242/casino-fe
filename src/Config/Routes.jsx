@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { connect } from "react-redux";
 import MainLayout from "../Hoc/MainLayout";
 import Dashboard from "../Containers/Dashboard";
 import SnackBar from "../Components/SnackBar";
 import Modal from "../Components/Modal";
-import { setupInterceptors } from "../Actions/authActions";
 import Countries from "../Containers/Countries";
 import SlotMachine from "../Containers/SlotMachine";
 
@@ -49,11 +47,4 @@ class Routes extends Component {
   }
 }
 
-const mD = {
-  setupInterceptors
-};
-
-export default connect(
-  null,
-  mD
-)(Routes);
+export default Routes
