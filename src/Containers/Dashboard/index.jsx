@@ -93,7 +93,7 @@ class Dashboard extends React.Component {
             <ListItemIcon>
               <ListIcon />
             </ListItemIcon>
-            <ListItemText primary={"Slot Machine"} />
+            <ListItemText primary={"Slot Machine "} />
           </ListItem>
         </List>
       </div>
