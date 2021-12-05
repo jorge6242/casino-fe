@@ -17,7 +17,7 @@ import { Grid } from "@material-ui/core";
  */
 class DataTable extends React.Component {
   state = {
-    page: 0
+    page: 0,
   };
 
   /**
@@ -28,9 +28,9 @@ class DataTable extends React.Component {
   };
 
   /**
-   * Handle to show rows per page
+   * Handle to show rows per pageasdasssasadsd
    */
-  handleChangeRowsPerPage = event => {
+  handleChangeRowsPerPage = (event) => {
     this.setState({ page: 0, rowsPerPage: event.target.value });
   };
 
@@ -48,11 +48,8 @@ class DataTable extends React.Component {
             <TableBody>
               {rows
                 .slice(page * pagination, page * pagination + pagination)
-                .map(row => (
-                  <TableRow
-                    key={row.id}
-                    className={classes.tableRow}
-                  >
+                .map((row) => (
+                  <TableRow key={row.id} className={classes.tableRow}>
                     <TableCell component="th" scope="row">
                       <Grid item xs={12}>
                         {row.name}
@@ -74,7 +71,7 @@ class DataTable extends React.Component {
                   rowsPerPage={pagination}
                   page={page}
                   SelectProps={{
-                    native: true
+                    native: true,
                   }}
                   onChangePage={this.handleChangePage}
                   onChangeRowsPerPage={this.handleChangeRowsPerPage}
@@ -91,7 +88,7 @@ class DataTable extends React.Component {
 
 DataTable.propTypes = {
   /** Object styles of material UI */
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(DataTable);
